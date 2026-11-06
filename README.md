@@ -25,6 +25,18 @@ The repository holds one small module per lecture step.
 
 Doxygen comments in the source describe every public name; `Doxyfile` builds them into `docs/doxygen/`.
 
+### Lecture steps
+
+Each lecture has its own screenshot in `docs/images/` (made by `docs/images/capture.py` with a headless browser, so no window opens on your desktop) and a wiki page that explains what the lecture taught.
+
+**Lecture 1: frontend, backend and the request-response cycle.** The client asks, the Flask server prepares the answer, the database supplies data.
+
+![Lecture 1: client, server and database](docs/images/lecture-01.png)
+
+**Lecture 2: the first Flask server.** `hello.py` serves "Hello, World!" from the home route. Start it with `flask --app flask_day_54.presentation.hello run` (or set `FLASK_APP`: `export FLASK_APP=flask_day_54.presentation.hello` on macOS and Linux, `$env:FLASK_APP = "flask_day_54.presentation.hello"` in PowerShell, `set FLASK_APP=flask_day_54.presentation.hello` in Command Prompt, then `flask run`).
+
+![Lecture 2: Hello, World! in the browser](docs/images/lecture-02.png)
+
 ## 📋 Requirements
 
 - Python 3.13 or newer, because the project sets `requires-python = ">=3.13"` in `pyproject.toml`.
