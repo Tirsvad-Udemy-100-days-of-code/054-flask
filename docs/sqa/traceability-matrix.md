@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-06 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | pending |
+| 2026-11-06 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | [73a5a95] |
 
 ---
 
@@ -71,3 +71,4 @@ updated whenever an artifact instance is created or reviewed.
 [RC-007]: ./reviews/rc-007-mil-003-cli-and-main.md
 [RC-008]: ./reviews/rc-008-mil-004-functions-decorators.md
 [RC-009]: ./reviews/rc-009-mil-005-docs-wiki.md
+[73a5a95]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/commit/73a5a95d28db041e4f27342cc552e18f7d386410
