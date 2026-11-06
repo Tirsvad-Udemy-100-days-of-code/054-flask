@@ -11,6 +11,7 @@ Usage (from the repository root, with the project's .venv active):
 
 import html
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -101,6 +102,15 @@ def terminal_page(title: str, entries: list[tuple[str, str]], png: Path, height:
     shot(src, png, 900, height)
 
 
+def stop(proc: subprocess.Popen) -> None:
+    """Stop a server and its reloader child."""
+    if os.name == "nt":
+        subprocess.run(["taskkill", "/F", "/T", "/PID", str(proc.pid)], capture_output=True)  # nosemgrep
+    else:
+        proc.kill()
+    proc.wait(timeout=10)
+
+
 def python() -> str:
     return sys.executable
 
@@ -141,7 +151,7 @@ def step2() -> None:
         src.write_text(page, encoding="utf-8")
         shot(src, OUT / "lecture-02.png", 700, 230)
     finally:
-        proc.kill()
+        stop(proc)
 
 
 def step3() -> None:
@@ -153,11 +163,11 @@ def step3() -> None:
         "ls",
         "mkdir my_project",
         "cd my_project && touch hello.py && ls",
-        "cd .. && rm -rf my_project && ls",
+        "rm -rf my_project && ls",
     ]
     for command in script:
         output = run([bash, "-c", command], work)
-        entries.append((command, output.replace(str(work).replace("\\", "/"), "~/demo")))
+        entries.append((command, re.sub(r"/tmp/cli-demo-\w+", "~/demo", output)))
     shutil.rmtree(work, ignore_errors=True)
     terminal_page("Terminal - lecture 3: the command line", entries, OUT / "lecture-03.png", 330)
 
@@ -188,8 +198,13 @@ def step4() -> None:
         text=True,
     )
     time.sleep(3)  # nosemgrep
-    server.kill()
-    out = (server.stdout.read() if server.stdout else "").strip()
+    stop(server)
+    raw = (server.stdout.read() if server.stdout else "").strip()
+    # Leave out the .env tip and the random debugger PIN; they say nothing about the lecture.
+    kept = [
+        line for line in raw.splitlines() if "Tip:" not in line and "Debugger PIN" not in line
+    ]
+    out = "\n".join(kept)
     entries.append(("python -m flask_day_54.presentation.hello", out + "\n^C"))
     terminal_page("Terminal - lecture 4: __name__ and __main__", entries, OUT / "lecture-04.png", 560)
 

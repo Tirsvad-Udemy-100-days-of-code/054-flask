@@ -37,6 +37,14 @@ Each lecture has its own screenshot in `docs/images/` (made by `docs/images/capt
 
 ![Lecture 2: Hello, World! in the browser](docs/images/lecture-02.png)
 
+**Lecture 3: the command line.** `pwd`, `ls`, `cd`, `mkdir`, `touch` and `rm` (with `rm -rf` as the command to double-check). `flask_day_54.domain.cli_basics` lists them with their Windows equivalents: `python -m flask_day_54.domain.cli_basics`. The screenshot shows the real commands run in a temporary folder.
+
+![Lecture 3: the command line](docs/images/lecture-03.png)
+
+**Lecture 4: `__name__` and `__main__`.** A file run directly has `__name__ == "__main__"`; an imported file has its module name. `app.run()` sits under that check in `hello.py`, so there are two ways to start the server: `flask --app flask_day_54.presentation.hello run` or `python -m flask_day_54.presentation.hello`. Try `python -m flask_day_54.domain.name_demo`.
+
+![Lecture 4: __name__ and __main__](docs/images/lecture-04.png)
+
 ## 📋 Requirements
 
 - Python 3.13 or newer, because the project sets `requires-python = ">=3.13"` in `pyproject.toml`.
