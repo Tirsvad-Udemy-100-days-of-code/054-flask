@@ -25,6 +25,8 @@ The repository holds one small module per lecture step.
 
 Doxygen comments in the source describe every public name; `Doxyfile` builds them into `docs/doxygen/`.
 
+The wiki (English, Danish and Bahasa Malaysia) explains what each lecture taught; its sources are in `docs/wiki/` and are published to the repository wiki when they are merged to `main`.
+
 ### Lecture steps
 
 Each lecture has its own screenshot in `docs/images/` (made by `docs/images/capture.py` with a headless browser, so no window opens on your desktop) and a wiki page that explains what the lecture taught.

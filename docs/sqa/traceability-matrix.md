@@ -25,14 +25,14 @@ updated whenever an artifact instance is created or reviewed.
 | --- | --- | --- | --- | --- | --- | --- |
 | [BC-001] | BC | en | it | - | [SA-001], [PP-001] | [RC-001] |
 | [SA-001] | SA | en | it | [BC-001] | [BC-001] | [RC-002] |
-| [PP-001] | PP | en | it | [BC-001], [SA-001] | [MIL-001] to [MIL-005] | [RC-003] |
+| [PP-001] | PP | en | it | [BC-001], [SA-001] | [MIL-001] to [MIL-005] | [RC-021] |
 | [ADR-0001] | ADR | - | - | [BC-001], [PP-001] | [MIL-001] to [MIL-004] | [RC-010] |
 | [DICT-001] | DICT | en | it | [BC-001], [SA-001] | - | [RC-004] |
-| [MIL-001] | MIL | en | it | [BC-001], [PP-001], [ADR-0001] | - | [RC-011] |
-| [MIL-002] | MIL | en | it | [BC-001], [PP-001], [ADR-0001] | - | [RC-012] |
-| [MIL-003] | MIL | en | it | [BC-001], [PP-001], [ADR-0001] | - | [RC-013] |
-| [MIL-004] | MIL | en | it | [BC-001], [PP-001], [ADR-0001] | - | [RC-014] |
-| [MIL-005] | MIL | en | it | [BC-001], [PP-001] | - | [RC-009] |
+| [MIL-001] | MIL | en | it | [BC-001], [PP-001], [ADR-0001] | - | [RC-011], [RC-015] |
+| [MIL-002] | MIL | en | it | [BC-001], [PP-001], [ADR-0001] | - | [RC-012], [RC-016] |
+| [MIL-003] | MIL | en | it | [BC-001], [PP-001], [ADR-0001] | - | [RC-013], [RC-017] |
+| [MIL-004] | MIL | en | it | [BC-001], [PP-001], [ADR-0001] | - | [RC-014], [RC-018] |
+| [MIL-005] | MIL | en | it | [BC-001], [PP-001] | - | [RC-009], [RC-019], [RC-020] |
 
 ## Concern Coverage
 
@@ -51,8 +51,6 @@ updated whenever an artifact instance is created or reviewed.
 | # | Views | Inconsistency | Found in (RC-ID) | Status | Resolved in |
 | --- | --- | --- | --- | --- | --- |
 | - | - | None found | - | Closed | - |
-
----
 
 ---
 
@@ -80,3 +78,10 @@ updated whenever an artifact instance is created or reviewed.
 [RC-012]: ./reviews/rc-012-mil-002-hello-flask-delta.md
 [RC-013]: ./reviews/rc-013-mil-003-cli-and-main-delta.md
 [RC-014]: ./reviews/rc-014-mil-004-functions-decorators-delta.md
+[RC-015]: ./reviews/rc-015-code-mil-001-foundation.md
+[RC-016]: ./reviews/rc-016-code-mil-002-hello-flask.md
+[RC-017]: ./reviews/rc-017-code-mil-003-cli-and-main.md
+[RC-018]: ./reviews/rc-018-code-mil-004-functions-decorators.md
+[RC-019]: ./reviews/rc-019-wiki-mil-005.md
+[RC-020]: ./reviews/rc-020-code-mil-005-docs-wiki.md
+[RC-021]: ./reviews/rc-021-project-plan-delta.md

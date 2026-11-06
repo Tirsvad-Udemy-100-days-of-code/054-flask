@@ -50,7 +50,9 @@ body{margin:0;background:#f3f3f3;font-family:Segoe UI,Arial,sans-serif}
 
 def find_browser() -> str:
     for candidate in BROWSERS:
-        found = shutil.which(candidate) or (candidate if os.path.exists(candidate) else None)
+        found = shutil.which(candidate) or (
+            candidate if os.path.exists(candidate) else None
+        )
         if found:
             return found
     raise SystemExit("No Edge or Chrome found for headless screenshots")
@@ -81,20 +83,28 @@ def shot(page: Path, png: Path, width: int, height: int) -> None:
 
 
 def run(cmd: list[str], cwd: Path, timeout: int = 30) -> str:
-    done = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, timeout=timeout)  # nosemgrep
+    done = subprocess.run(
+        cmd, cwd=cwd, capture_output=True, text=True, timeout=timeout
+    )  # nosemgrep
     return (done.stdout + done.stderr).rstrip("\n")
 
 
-def terminal_page(title: str, entries: list[tuple[str, str]], png: Path, height: int) -> None:
+def terminal_page(
+    title: str, entries: list[tuple[str, str]], png: Path, height: int
+) -> None:
     """Render (command, output) pairs as a terminal and take the screenshot."""
     lines = []
     for command, output in entries:
-        lines.append(f'<span class="p">$</span> <span class="c">{html.escape(command)}</span>')
+        lines.append(
+            f'<span class="p">$</span> <span class="c">{html.escape(command)}</span>'
+        )
         if output:
             lines.append(html.escape(output))
     page = (
         f"<!doctype html><meta charset='utf-8'><style>{TERMINAL_CSS}</style>"
-        f"<div class='bar'>{html.escape(title)}</div><pre>" + "\n".join(lines) + "</pre>"
+        f"<div class='bar'>{html.escape(title)}</div><pre>"
+        + "\n".join(lines)
+        + "</pre>"
     )
     SOURCES.mkdir(exist_ok=True)
     src = SOURCES / (png.stem + ".html")
@@ -105,7 +115,9 @@ def terminal_page(title: str, entries: list[tuple[str, str]], png: Path, height:
 def stop(proc: subprocess.Popen) -> None:
     """Stop a server and its reloader child."""
     if os.name == "nt":
-        subprocess.run(["taskkill", "/F", "/T", "/PID", str(proc.pid)], capture_output=True)  # nosemgrep
+        subprocess.run(
+            ["taskkill", "/F", "/T", "/PID", str(proc.pid)], capture_output=True
+        )  # nosemgrep
     else:
         proc.kill()
     proc.wait(timeout=10)
@@ -140,7 +152,11 @@ def start_server() -> subprocess.Popen:
 def step2() -> None:
     proc = start_server()
     try:
-        body = urllib.request.urlopen(f"http://127.0.0.1:{PORT}/", timeout=3).read().decode()
+        body = (
+            urllib.request.urlopen(f"http://127.0.0.1:{PORT}/", timeout=3)
+            .read()
+            .decode()
+        )
         page = (
             f"<!doctype html><meta charset='utf-8'><style>{BROWSER_CSS}</style>"
             f"<div class='tab'>127.0.0.1:5057</div>"
@@ -169,14 +185,16 @@ def step3() -> None:
         output = run([bash, "-c", command], work)
         entries.append((command, re.sub(r"/tmp/cli-demo-\w+", "~/demo", output)))
     shutil.rmtree(work, ignore_errors=True)
-    terminal_page("Terminal - lecture 3: the command line", entries, OUT / "lecture-03.png", 330)
+    terminal_page(
+        "Terminal - lecture 3: the command line", entries, OUT / "lecture-03.png", 330
+    )
 
 
 def step4() -> None:
     entries = []
     cmd = "python -m flask_day_54.domain.name_demo"
     entries.append((cmd, run([python(), "-m", "flask_day_54.domain.name_demo"], ROOT)))
-    imp = "python -c \"import flask_day_54.domain.name_demo as m; print(m.describe_name(m.__name__))\""
+    imp = 'python -c "import flask_day_54.domain.name_demo as m; print(m.describe_name(m.__name__))"'
     entries.append(
         (
             imp,
@@ -202,23 +220,40 @@ def step4() -> None:
     raw = (server.stdout.read() if server.stdout else "").strip()
     # Leave out the .env tip and the random debugger PIN; they say nothing about the lecture.
     kept = [
-        line for line in raw.splitlines() if "Tip:" not in line and "Debugger PIN" not in line
+        line
+        for line in raw.splitlines()
+        if "Tip:" not in line and "Debugger PIN" not in line
     ]
     out = "\n".join(kept)
     entries.append(("python -m flask_day_54.presentation.hello", out + "\n^C"))
-    terminal_page("Terminal - lecture 4: __name__ and __main__", entries, OUT / "lecture-04.png", 560)
+    terminal_page(
+        "Terminal - lecture 4: __name__ and __main__",
+        entries,
+        OUT / "lecture-04.png",
+        560,
+    )
 
 
 def step5() -> None:
     module = "flask_day_54.domain.first_class_functions"
     entries = [(f"python -m {module}", run([python(), "-m", module], ROOT))]
-    terminal_page("Terminal - lecture 5: functions as first-class objects", entries, OUT / "lecture-05.png", 420)
+    terminal_page(
+        "Terminal - lecture 5: functions as first-class objects",
+        entries,
+        OUT / "lecture-05.png",
+        420,
+    )
 
 
 def step6() -> None:
     module = "flask_day_54.domain.decorators"
     entries = [(f"python -m {module}", run([python(), "-m", module], ROOT))]
-    terminal_page("Terminal - lecture 6: decorators and the @ syntax", entries, OUT / "lecture-06.png", 380)
+    terminal_page(
+        "Terminal - lecture 6: decorators and the @ syntax",
+        entries,
+        OUT / "lecture-06.png",
+        380,
+    )
 
 
 STEPS = {1: step1, 2: step2, 3: step3, 4: step4, 5: step5, 6: step6}

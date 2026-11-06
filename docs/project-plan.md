@@ -11,7 +11,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-06 | Accepted | Jens Tirsvad Nielsen | S01 | Initial version | [73a5a95] |
+| 2026-11-06 | Deprecated | Jens Tirsvad Nielsen | S01 | Initial version | [73a5a95] |
+| 2026-11-06 | Accepted | Jens Tirsvad Nielsen | S01 | Link each gateway to its synced Gitea milestone | pending |
 
 ---
 
@@ -31,11 +32,11 @@ Schedule the five gateways that turn the Day 54 lectures into a tested, document
 
 | Gateway | Document | Window | Decision date | Owner | Stories | Main deliverable | Milestone |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Foundation | [MIL-001] | 2026-11-06 | 2026-11-06 | S01 | none (technical tasks) | pyproject, gitignore, constants, Doxyfile, README, repo metadata | not yet synced |
-| Backend and Hello Flask | [MIL-002] | 2026-11-06 to 2026-11-07 | 2026-11-07 | S01 | none (technical tasks) | hello.py, tests, screenshots 1 and 2 | not yet synced |
-| Command line and __main__ | [MIL-003] | 2026-11-07 to 2026-11-08 | 2026-11-08 | S01 | none (technical tasks) | main guard, name_demo, cli_basics, screenshots 3 and 4 | not yet synced |
-| Functions and decorators | [MIL-004] | 2026-11-08 to 2026-11-09 | 2026-11-09 | S01 | none (technical tasks) | first_class_functions, decorators, screenshots 5 and 6 | not yet synced |
-| Docs and wiki | [MIL-005] | 2026-11-09 to 2026-11-10 | 2026-11-10 | S01 | none (technical tasks) | three-language wiki, Doxygen, code review | not yet synced |
+| Foundation | [MIL-001] | 2026-11-06 | 2026-11-06 | S01 | none (technical tasks) | pyproject, gitignore, constants, Doxyfile, README, repo metadata | [Milestone 001][GM-001] |
+| Backend and Hello Flask | [MIL-002] | 2026-11-06 to 2026-11-07 | 2026-11-07 | S01 | none (technical tasks) | hello.py, tests, screenshots 1 and 2 | [Milestone 002][GM-002] |
+| Command line and __main__ | [MIL-003] | 2026-11-07 to 2026-11-08 | 2026-11-08 | S01 | none (technical tasks) | main guard, name_demo, cli_basics, screenshots 3 and 4 | [Milestone 003][GM-003] |
+| Functions and decorators | [MIL-004] | 2026-11-08 to 2026-11-09 | 2026-11-09 | S01 | none (technical tasks) | first_class_functions, decorators, screenshots 5 and 6 | [Milestone 004][GM-004] |
+| Docs and wiki | [MIL-005] | 2026-11-09 to 2026-11-10 | 2026-11-10 | S01 | none (technical tasks) | three-language wiki, Doxygen, code review | [Milestone 005][GM-005] |
 
 ```plantuml
 @startgantt
@@ -96,3 +97,8 @@ A No-Go on a gateway moves every later gateway by the time needed to fix and re-
 [MIL-004]: ./milestones/mil-004-functions-decorators.md
 [MIL-005]: ./milestones/mil-005-docs-wiki.md
 [73a5a95]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/commit/73a5a95d28db041e4f27342cc552e18f7d386410
+[GM-001]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/milestone/342
+[GM-002]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/milestone/343
+[GM-003]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/milestone/344
+[GM-004]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/milestone/345
+[GM-005]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/milestone/346
