@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local secrets (personal tooling only, never part of the project)
+.env
+.env.*
+
+# Generated documentation
+docs/doxygen/
+
+# AI prompt log (the repository is public)
+/docs/ai-prompts/
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

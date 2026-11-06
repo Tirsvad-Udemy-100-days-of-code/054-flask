@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flask-day-54"
+version = "0.1.0"
+description = "Udemy 100 Days of Code, Day 54: Flask basics, command line, __main__, first-class functions and decorators."
+readme = "README.md"
+requires-python = ">=3.13"
+license = "AGPL-3.0-only"
+authors = [{ name = "Jens Tirsvad Nielsen" }]
+# No mandatory runtime dependency: the pure-Python lectures need nothing installed.
+dependencies = []
+
+[project.optional-dependencies]
+web = ["flask>=3.0"]
+dev = ["pytest>=8.0", "flask>=3.0", "ruff>=0.6"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
