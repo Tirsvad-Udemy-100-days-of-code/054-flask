@@ -6,6 +6,8 @@ keyboard). Terminal screenshots render the real output of real commands.
 Usage (from the repository root, with the project's .venv active):
     python docs/images/capture.py 1 2 3 4 5 6
 """
+# Developer tool only (not shipped in the package): every command it runs is a fixed list
+# built from constants, sys.executable and local paths; it reads no external input.
 
 import html
 import os
@@ -57,7 +59,7 @@ def shot(page: Path, png: Path, width: int, height: int) -> None:
     """Take a headless screenshot of a local page or a URL."""
     target = page.as_uri() if isinstance(page, Path) else page
     profile = tempfile.mkdtemp(prefix="shot-")
-    subprocess.run(
+    subprocess.run(  # nosemgrep
         [
             find_browser(),
             "--headless=new",
@@ -78,7 +80,7 @@ def shot(page: Path, png: Path, width: int, height: int) -> None:
 
 
 def run(cmd: list[str], cwd: Path, timeout: int = 30) -> str:
-    done = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, timeout=timeout)
+    done = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, timeout=timeout)  # nosemgrep
     return (done.stdout + done.stderr).rstrip("\n")
 
 
@@ -108,7 +110,7 @@ def step1() -> None:
 
 
 def start_server() -> subprocess.Popen:
-    proc = subprocess.Popen(
+    proc = subprocess.Popen(  # nosemgrep
         [python(), "-m", "flask", "--app", APP, "run", "--port", str(PORT)],
         cwd=ROOT,
         stdout=subprocess.PIPE,
@@ -120,7 +122,7 @@ def start_server() -> subprocess.Popen:
             urllib.request.urlopen(f"http://127.0.0.1:{PORT}/", timeout=1).read()
             return proc
         except OSError:
-            time.sleep(0.25)
+            time.sleep(0.25)  # nosemgrep
     proc.kill()
     raise SystemExit("server did not start")
 
@@ -178,14 +180,14 @@ def step4() -> None:
             ),
         )
     )
-    server = subprocess.Popen(
+    server = subprocess.Popen(  # nosemgrep
         [python(), "-m", "flask_day_54.presentation.hello"],
         cwd=ROOT,
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
         text=True,
     )
-    time.sleep(3)
+    time.sleep(3)  # nosemgrep
     server.kill()
     out = (server.stdout.read() if server.stdout else "").strip()
     entries.append(("python -m flask_day_54.presentation.hello", out + "\n^C"))
