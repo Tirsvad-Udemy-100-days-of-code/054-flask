@@ -1,0 +1,10 @@
+<!doctype html><meta charset='utf-8'><style>
+body{margin:0;background:#1e1e1e;font-family:Consolas,'DejaVu Sans Mono',monospace;color:#d4d4d4}
+.bar{background:#333;color:#ccc;padding:8px 14px;font-size:14px}
+pre{margin:0;padding:16px 18px;font-size:15px;line-height:1.45;white-space:pre-wrap}
+.p{color:#6a9955}.c{color:#9cdcfe}
+</style><div class='bar'>Terminal - lecture 6: decorators and the @ syntax</div><pre><span class="p">$</span> <span class="c">python -m flask_day_54.domain.decorators</span>
+plain: Hello, World!
+by hand, make_bold(plain_hello)(): &lt;b&gt;Hello, World!&lt;/b&gt;
+@ syntax, say_hello(): &lt;b&gt;&lt;em&gt;&lt;u&gt;Hello, World!&lt;/u&gt;&lt;/em&gt;&lt;/b&gt;
+say_hello.__name__: say_hello</pre>

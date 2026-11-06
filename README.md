@@ -45,6 +45,14 @@ Each lecture has its own screenshot in `docs/images/` (made by `docs/images/capt
 
 ![Lecture 4: __name__ and __main__](docs/images/lecture-04.png)
 
+**Lecture 5: functions are first-class objects.** A function can be passed as an argument (`calculate(add, 2, 3)`), defined inside another function and returned from it. See `flask_day_54.domain.first_class_functions`; run it with `python -m flask_day_54.domain.first_class_functions`.
+
+![Lecture 5: functions as first-class objects](docs/images/lecture-05.png)
+
+**Lecture 6: decorators and the `@` syntax.** `@make_bold` above a function is shorthand for `say_hello = make_bold(say_hello)`. See `flask_day_54.domain.decorators`; run it with `python -m flask_day_54.domain.decorators`.
+
+![Lecture 6: decorators](docs/images/lecture-06.png)
+
 ## 📋 Requirements
 
 - Python 3.13 or newer, because the project sets `requires-python = ">=3.13"` in `pyproject.toml`.
