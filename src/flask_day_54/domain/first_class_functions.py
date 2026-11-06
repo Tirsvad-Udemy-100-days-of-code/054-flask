@@ -26,7 +26,10 @@ def subtract(n1: float, n2: float) -> float:
 
 
 ## @brief Apply a function passed as argument to two numbers.
+#  @param n1 The first number.
+#  @param n2 The second number.
 #  @param func The function to call with `n1` and `n2`.
+#  @return The result of `func(n1, n2)`.
 def calculate(n1: float, n2: float, func: Callable[[float, float], float]) -> float:
     """Return `func(n1, n2)`."""
     return func(n1, n2)
