@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-06 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | pending |
+| 2026-11-06 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [f8a1794] |
 
 ---
 
@@ -59,3 +59,4 @@ Go — All applicable mandatory criteria pass.
 
 [MIL-003]: ../../milestones/mil-003-cli-and-main.md
 [QC-PY-001]: ../../../framework/qc/code/qc-programming-python.md
+[f8a1794]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/commit/f8a1794373b21d718d756215eae34c67e873fbd2
