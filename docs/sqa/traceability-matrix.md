@@ -32,7 +32,7 @@ updated whenever an artifact instance is created or reviewed.
 | [MIL-002] | MIL | en | it | [BC-001], [PP-001], [ADR-0001] | - | [RC-012], [RC-016] |
 | [MIL-003] | MIL | en | it | [BC-001], [PP-001], [ADR-0001] | - | [RC-013], [RC-017] |
 | [MIL-004] | MIL | en | it | [BC-001], [PP-001], [ADR-0001] | - | [RC-014], [RC-018] |
-| [MIL-005] | MIL | en | it | [BC-001], [PP-001] | - | [RC-009], [RC-019], [RC-020] |
+| [MIL-005] | MIL | en | it | [BC-001], [PP-001] | - | [RC-009], [RC-019], [RC-020], [RC-022] |
 
 ## Concern Coverage
 
@@ -85,3 +85,4 @@ updated whenever an artifact instance is created or reviewed.
 [RC-019]: ./reviews/rc-019-wiki-mil-005.md
 [RC-020]: ./reviews/rc-020-code-mil-005-docs-wiki.md
 [RC-021]: ./reviews/rc-021-project-plan-delta.md
+[RC-022]: ./reviews/rc-022-wiki-published-mil-005.md
