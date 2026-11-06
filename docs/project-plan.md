@@ -12,7 +12,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-06 | Deprecated | Jens Tirsvad Nielsen | S01 | Initial version | [73a5a95] |
-| 2026-11-06 | Accepted | Jens Tirsvad Nielsen | S01 | Link each gateway to its synced Gitea milestone | pending |
+| 2026-11-06 | Accepted | Jens Tirsvad Nielsen | S01 | Link each gateway to its synced Gitea milestone | [8cd73cc] |
 
 ---
 
@@ -102,3 +102,4 @@ A No-Go on a gateway moves every later gateway by the time needed to fix and re-
 [GM-003]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/milestone/344
 [GM-004]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/milestone/345
 [GM-005]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/milestone/346
+[8cd73cc]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/commit/8cd73cc46b3f791e0c23a60809a50e4140089d4e

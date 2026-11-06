@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-06 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | pending |
+| 2026-11-06 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [8cd73cc] |
 
 ---
 
@@ -72,3 +72,4 @@ Go — Re-review of the whole checklist after the milestone links were added; al
 [PP-001]: ../../project-plan.md
 [QC-PP-001]: ../../../framework/qc/artifacts/qc-project-plan.md
 [QC-LANG-001]: ../../../framework/qc/artifacts/qc-language-domain.md
+[8cd73cc]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/commit/8cd73cc46b3f791e0c23a60809a50e4140089d4e
