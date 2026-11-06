@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-06 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | pending |
+| 2026-11-06 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [0f4e36b] |
 
 ---
 
@@ -63,3 +63,4 @@ Go — Re-review of the whole checklist after paths changed per ADR-0001 (RC-010
 [MIL-004]: ../../milestones/mil-004-functions-decorators.md
 [QC-MIL-001]: ../../../framework/qc/artifacts/qc-milestones-gateways.md
 [QC-LANG-001]: ../../../framework/qc/artifacts/qc-language-domain.md
+[0f4e36b]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/commit/0f4e36b68282be23a71aa6684af01ca85a1e9473

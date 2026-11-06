@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-06 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | pending |
+| 2026-11-06 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [0f4e36b] |
 
 Allowed Status values: `Proposed`, `Accepted`, `Rejected`, `Deprecated`, `Superseded by ADR-NNNN`.
 
@@ -58,3 +58,4 @@ Use option 2: the package `flask_day_54` with the layers `domain`, `application`
 [MIL-002]: ../milestones/mil-002-hello-flask.md
 [MIL-003]: ../milestones/mil-003-cli-and-main.md
 [MIL-004]: ../milestones/mil-004-functions-decorators.md
+[0f4e36b]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/commit/0f4e36b68282be23a71aa6684af01ca85a1e9473

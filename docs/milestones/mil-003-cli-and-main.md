@@ -12,7 +12,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-06 | Deprecated | Jens Tirsvad Nielsen | S01 | Initial version | [73a5a95] |
-| 2026-11-06 | Accepted | Jens Tirsvad Nielsen | S01 | Paths follow the layered layout of ADR-0001 | pending |
+| 2026-11-06 | Accepted | Jens Tirsvad Nielsen | S01 | Paths follow the layered layout of ADR-0001 | [0f4e36b] |
 
 ---
 
@@ -73,3 +73,4 @@ Decide whether lectures 3 and 4 (the command line and the `__name__` / `__main__
 [BC-001]: ../business-case.md
 [ADR-0001]: ../adr/adr-0001-layered-package-layout.md
 [73a5a95]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/commit/73a5a95d28db041e4f27342cc552e18f7d386410
+[0f4e36b]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/commit/0f4e36b68282be23a71aa6684af01ca85a1e9473
