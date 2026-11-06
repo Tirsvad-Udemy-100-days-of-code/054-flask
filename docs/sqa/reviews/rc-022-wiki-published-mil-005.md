@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-06 | Proposed | <author> | AI as stand-in for S01 | Initial version | pending |
+| 2026-11-06 | Proposed | <author> | AI as stand-in for S01 | Initial version | [7de7bd5] |
 
 ---
 
@@ -57,3 +57,4 @@ Go — Re-review of criterion 14 after publishing; all other results are unchang
 
 [MIL-005]: ../../milestones/mil-005-docs-wiki.md
 [QC-WIKI-001]: ../../../framework/qc/artifacts/qc-wiki.md
+[7de7bd5]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/commit/7de7bd50d8d12e77a2419ff253319732a1337e28
