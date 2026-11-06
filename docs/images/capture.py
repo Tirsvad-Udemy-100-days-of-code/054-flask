@@ -83,9 +83,9 @@ def shot(page: Path, png: Path, width: int, height: int) -> None:
 
 
 def run(cmd: list[str], cwd: Path, timeout: int = 30) -> str:
-    done = subprocess.run(
+    done = subprocess.run(  # nosemgrep
         cmd, cwd=cwd, capture_output=True, text=True, timeout=timeout
-    )  # nosemgrep
+    )
     return (done.stdout + done.stderr).rstrip("\n")
 
 
@@ -115,9 +115,9 @@ def terminal_page(
 def stop(proc: subprocess.Popen) -> None:
     """Stop a server and its reloader child."""
     if os.name == "nt":
-        subprocess.run(
+        subprocess.run(  # nosemgrep
             ["taskkill", "/F", "/T", "/PID", str(proc.pid)], capture_output=True
-        )  # nosemgrep
+        )
     else:
         proc.kill()
     proc.wait(timeout=10)
