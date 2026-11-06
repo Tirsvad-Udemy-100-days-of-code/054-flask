@@ -4,14 +4,15 @@
 | Key | Value |
 | --- | --- |
 | ID | MIL-001 |
-| CrossReference | [BC-001] |
+| CrossReference | [BC-001], [ADR-0001] |
 | Language | en |
 | Domain | it |
 
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-06 | Accepted | Jens Tirsvad Nielsen | S01 | Initial version | [73a5a95] |
+| 2026-11-06 | Deprecated | Jens Tirsvad Nielsen | S01 | Initial version | [73a5a95] |
+| 2026-11-06 | Accepted | Jens Tirsvad Nielsen | S01 | Paths follow the layered layout of ADR-0001 | pending |
 
 ---
 
@@ -21,7 +22,7 @@ Decide whether the project skeleton (configuration, tooling, documentation basel
 
 ## Deliverable
 
-A repository with `pyproject.toml`, `.gitignore`, `src/constants.py`, a Doxyfile, a README with `.venv` instructions, the repository description and topics, and a passing (empty-but-collecting) pytest run.
+A repository with `pyproject.toml`, `.gitignore`, `constants.py` files in the `domain` and `infrastructure` layers of `src/flask_day_54/`, a Doxyfile, a README with `.venv` instructions, the repository description and topics, and a passing (empty-but-collecting) pytest run.
 
 ## Go / No-Go Criteria
 
@@ -64,8 +65,8 @@ A repository with `pyproject.toml`, `.gitignore`, `src/constants.py`, a Doxyfile
 | --- | --- | --- | --- | --- |
 | 1 | Add pyproject.toml | Configure the project with requires-python >=3.13, the optional extras `web` (Flask) and `dev` (pytest), and pytest settings so tests import modules from `src/`. Keeps the pure-Python lectures free of runtime dependencies (SA-001 CN-006). | No | |
 | 2 | Add Python .gitignore | Ignore virtual environments, caches, build output, Doxygen output and the personal `.env` file so no token can be committed. | No | |
-| 3 | Add constants.py and package layout | Create `src/constants.py` for all constants (greeting, host, port, command names) and the empty `tests/` folder, as the constraints require constants in one place. | No | |
-| 4 | Add Doxyfile | Generate a Doxyfile that reads `src/`, writes to `docs/doxygen/` (ignored by git) and extracts documentation from Doxygen comments. | No | |
+| 3 | Add constants.py and package layout | Create `constants.py` files in the `domain` and `infrastructure` layers of `src/flask_day_54/` for all constants (greeting, host, port, command names) and the empty `tests/` folder, as the constraints require constants in one place. | No | |
+| 4 | Add Doxyfile | Generate a Doxyfile that reads `src/` (the `flask_day_54` package), writes to `docs/doxygen/` (ignored by git) and extracts documentation from Doxygen comments. | No | |
 | 5 | Write README from the framework template | Use the framework README template; describe creating and activating a local `.venv`, running `python -m pip install --upgrade pip`, installing extras, running the app and running pytest. | No | |
 | 6 | Set repository description and topics | Use the Gitea REST API with the token from the author's environment (never stored in the repository) to set a description and topics so visitors (S03) can find and understand the repository. | No | |
 | 7 | Record the AI prompt log | Add `docs/ai-prompts/session-001/` as `framework/process/ai-prompt-log.md` requires. | No | |
@@ -73,4 +74,5 @@ A repository with `pyproject.toml`, `.gitignore`, `src/constants.py`, a Doxyfile
 ---
 
 [BC-001]: ../business-case.md
+[ADR-0001]: ../adr/adr-0001-layered-package-layout.md
 [73a5a95]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/commit/73a5a95d28db041e4f27342cc552e18f7d386410

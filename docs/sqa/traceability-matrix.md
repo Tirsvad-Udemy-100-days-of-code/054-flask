@@ -26,11 +26,12 @@ updated whenever an artifact instance is created or reviewed.
 | [BC-001] | BC | en | it | - | [SA-001], [PP-001] | [RC-001] |
 | [SA-001] | SA | en | it | [BC-001] | [BC-001] | [RC-002] |
 | [PP-001] | PP | en | it | [BC-001], [SA-001] | [MIL-001] to [MIL-005] | [RC-003] |
+| [ADR-0001] | ADR | - | - | [BC-001], [PP-001] | [MIL-001] to [MIL-004] | [RC-010] |
 | [DICT-001] | DICT | en | it | [BC-001], [SA-001] | - | [RC-004] |
-| [MIL-001] | MIL | en | it | [BC-001], [PP-001] | - | [RC-005] |
-| [MIL-002] | MIL | en | it | [BC-001], [PP-001] | - | [RC-006] |
-| [MIL-003] | MIL | en | it | [BC-001], [PP-001] | - | [RC-007] |
-| [MIL-004] | MIL | en | it | [BC-001], [PP-001] | - | [RC-008] |
+| [MIL-001] | MIL | en | it | [BC-001], [PP-001], [ADR-0001] | - | [RC-011] |
+| [MIL-002] | MIL | en | it | [BC-001], [PP-001], [ADR-0001] | - | [RC-012] |
+| [MIL-003] | MIL | en | it | [BC-001], [PP-001], [ADR-0001] | - | [RC-013] |
+| [MIL-004] | MIL | en | it | [BC-001], [PP-001], [ADR-0001] | - | [RC-014] |
 | [MIL-005] | MIL | en | it | [BC-001], [PP-001] | - | [RC-009] |
 
 ## Concern Coverage
@@ -53,10 +54,13 @@ updated whenever an artifact instance is created or reviewed.
 
 ---
 
+---
+
 [BC-001]: ../business-case.md
 [SA-001]: ../stakeholder-analysis.md
 [PP-001]: ../project-plan.md
 [DICT-001]: ../dictionary.md
+[ADR-0001]: ../adr/adr-0001-layered-package-layout.md
 [MIL-001]: ../milestones/mil-001-foundation.md
 [MIL-002]: ../milestones/mil-002-hello-flask.md
 [MIL-003]: ../milestones/mil-003-cli-and-main.md
@@ -71,4 +75,8 @@ updated whenever an artifact instance is created or reviewed.
 [RC-007]: ./reviews/rc-007-mil-003-cli-and-main.md
 [RC-008]: ./reviews/rc-008-mil-004-functions-decorators.md
 [RC-009]: ./reviews/rc-009-mil-005-docs-wiki.md
-[73a5a95]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/commit/73a5a95d28db041e4f27342cc552e18f7d386410
+[RC-010]: ./reviews/rc-010-adr-0001.md
+[RC-011]: ./reviews/rc-011-mil-001-foundation-delta.md
+[RC-012]: ./reviews/rc-012-mil-002-hello-flask-delta.md
+[RC-013]: ./reviews/rc-013-mil-003-cli-and-main-delta.md
+[RC-014]: ./reviews/rc-014-mil-004-functions-decorators-delta.md

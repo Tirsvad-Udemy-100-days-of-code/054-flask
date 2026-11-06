@@ -4,14 +4,15 @@
 | Key | Value |
 | --- | --- |
 | ID | MIL-002 |
-| CrossReference | [BC-001] |
+| CrossReference | [BC-001], [ADR-0001] |
 | Language | en |
 | Domain | it |
 
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-06 | Accepted | Jens Tirsvad Nielsen | S01 | Initial version | [73a5a95] |
+| 2026-11-06 | Deprecated | Jens Tirsvad Nielsen | S01 | Initial version | [73a5a95] |
+| 2026-11-06 | Accepted | Jens Tirsvad Nielsen | S01 | Paths follow the layered layout of ADR-0001 | pending |
 
 ---
 
@@ -21,13 +22,13 @@ Decide whether lectures 1 and 2 (frontend versus backend, and the first Flask se
 
 ## Deliverable
 
-`src/hello.py` with a Flask `app` and a home route returning the greeting, tests of that route, a screenshot for lecture 1 (client, server, database and the request-response cycle) and for lecture 2 (the browser showing the greeting), and README text for both.
+`src/flask_day_54/presentation/hello.py` with a Flask `app` and a home route returning the greeting, tests of that route, a screenshot for lecture 1 (client, server, database and the request-response cycle) and for lecture 2 (the browser showing the greeting), and README text for both.
 
 ## Go / No-Go Criteria
 
 | # | Criterion (objectively checkable) | Go | No-Go |
 | --- | --- | --- | --- |
-| 1 | `flask --app hello run` serves the greeting on the configured port | Met | Not met |
+| 1 | `flask --app flask_day_54.presentation.hello run` serves the greeting on the configured port | Met | Not met |
 | 2 | A pytest test requests `/` with the Flask test client and gets status 200 and the greeting | Met | Not met |
 | 3 | Screenshots `lecture-01.png` and `lecture-02.png` exist in `docs/images/` and are shown in the README | Met | Not met |
 | 4 | Doxygen comments exist on every public name in `hello.py` | Met | Not met |
@@ -69,4 +70,5 @@ Decide whether lectures 1 and 2 (frontend versus backend, and the first Flask se
 ---
 
 [BC-001]: ../business-case.md
+[ADR-0001]: ../adr/adr-0001-layered-package-layout.md
 [73a5a95]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/commit/73a5a95d28db041e4f27342cc552e18f7d386410

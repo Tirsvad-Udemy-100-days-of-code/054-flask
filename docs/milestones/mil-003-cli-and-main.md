@@ -4,14 +4,15 @@
 | Key | Value |
 | --- | --- |
 | ID | MIL-003 |
-| CrossReference | [BC-001] |
+| CrossReference | [BC-001], [ADR-0001] |
 | Language | en |
 | Domain | it |
 
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-06 | Accepted | Jens Tirsvad Nielsen | S01 | Initial version | [73a5a95] |
+| 2026-11-06 | Deprecated | Jens Tirsvad Nielsen | S01 | Initial version | [73a5a95] |
+| 2026-11-06 | Accepted | Jens Tirsvad Nielsen | S01 | Paths follow the layered layout of ADR-0001 | pending |
 
 ---
 
@@ -21,13 +22,13 @@ Decide whether lectures 3 and 4 (the command line and the `__name__` / `__main__
 
 ## Deliverable
 
-`hello.py` starts through `python src/hello.py` guarded by `if __name__ == "__main__"`, `src/cli_basics.py` and `src/name_demo.py` with tests, and screenshots for lectures 3 and 4.
+`hello.py` starts through `python -m flask_day_54.presentation.hello` guarded by `if __name__ == "__main__"`, `src/flask_day_54/domain/cli_basics.py` and `src/flask_day_54/domain/name_demo.py` with tests, and screenshots for lectures 3 and 4.
 
 ## Go / No-Go Criteria
 
 | # | Criterion (objectively checkable) | Go | No-Go |
 | --- | --- | --- | --- |
-| 1 | `python src/hello.py` starts the server; importing `hello` does not start it (tested) | Met | Not met |
+| 1 | `python -m flask_day_54.presentation.hello` starts the server; importing `flask_day_54.presentation.hello` does not start it (tested) | Met | Not met |
 | 2 | `name_demo` reports the main program versus an imported module (tested) | Met | Not met |
 | 3 | `cli_basics` lists the lecture's commands with their Windows and macOS/Linux forms (tested) | Met | Not met |
 | 4 | Screenshots `lecture-03.png` and `lecture-04.png` exist in `docs/images/` and are shown in the README | Met | Not met |
@@ -64,10 +65,11 @@ Decide whether lectures 3 and 4 (the command line and the `__name__` / `__main__
 | 2 | Add name_demo module | Add a function that explains whether a module name means the file is the main program or an import, mirroring lecture 4, with tests. | No | |
 | 3 | Add cli_basics module | Add the lecture's commands (pwd, ls, cd, mkdir, touch, rm) with Windows and macOS/Linux equivalents and a warning for destructive ones, with tests. | No | |
 | 4 | Screenshot lecture 3: command line | Run the lecture's commands in a temporary folder, render the real transcript and capture it headlessly. | No | |
-| 5 | Screenshot lecture 4: __main__ and app.run | Capture the real output of `python src/name_demo.py` and of the server start from `python src/hello.py`. | No | |
-| 6 | README section for lectures 3 and 4 | Add the two screenshots and the two ways to start the server (`flask run` versus `python src/hello.py`). | No | |
+| 5 | Screenshot lecture 4: __main__ and app.run | Capture the real output of `python -m flask_day_54.domain.name_demo` and of the server start from `python -m flask_day_54.presentation.hello`. | No | |
+| 6 | README section for lectures 3 and 4 | Add the two screenshots and the two ways to start the server (`flask run` versus `python -m flask_day_54.presentation.hello`). | No | |
 
 ---
 
 [BC-001]: ../business-case.md
+[ADR-0001]: ../adr/adr-0001-layered-package-layout.md
 [73a5a95]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/commit/73a5a95d28db041e4f27342cc552e18f7d386410

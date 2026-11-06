@@ -4,14 +4,15 @@
 | Key | Value |
 | --- | --- |
 | ID | MIL-004 |
-| CrossReference | [BC-001] |
+| CrossReference | [BC-001], [ADR-0001] |
 | Language | en |
 | Domain | it |
 
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-06 | Accepted | Jens Tirsvad Nielsen | S01 | Initial version | [73a5a95] |
+| 2026-11-06 | Deprecated | Jens Tirsvad Nielsen | S01 | Initial version | [73a5a95] |
+| 2026-11-06 | Accepted | Jens Tirsvad Nielsen | S01 | Paths follow the layered layout of ADR-0001 | pending |
 
 ---
 
@@ -21,7 +22,7 @@ Decide whether lectures 5 and 6 (functions as first-class objects, nested and re
 
 ## Deliverable
 
-`src/first_class_functions.py` (`add`, `subtract`, `calculate`, nested and returned functions) and `src/decorators.py` (the @ syntax) with tests, and screenshots for lectures 5 and 6.
+`src/flask_day_54/domain/first_class_functions.py` (`add`, `subtract`, `calculate`, nested and returned functions) and `src/flask_day_54/domain/decorators.py` (the @ syntax) with tests, and screenshots for lectures 5 and 6.
 
 ## Go / No-Go Criteria
 
@@ -70,4 +71,5 @@ Decide whether lectures 5 and 6 (functions as first-class objects, nested and re
 ---
 
 [BC-001]: ../business-case.md
+[ADR-0001]: ../adr/adr-0001-layered-package-layout.md
 [73a5a95]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/commit/73a5a95d28db041e4f27342cc552e18f7d386410
