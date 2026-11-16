@@ -1,6 +1,6 @@
-# Lecture 5: Functions as first-class objects
-
 **English** · [Dansk](Lecture-5-First-Class-Functions-da) · [Bahasa Malaysia](Lecture-5-First-Class-Functions-ms)
+
+# Lecture 5: Functions as first-class objects
 
 ![Lecture 5: Functions as first-class objects](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/raw/branch/main/docs/images/lecture-05.png)
 

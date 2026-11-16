@@ -1,6 +1,6 @@
-# Forelæsning 5: Funktioner som førsteklasses objekter
-
 [English](Lecture-5-First-Class-Functions) · **Dansk** · [Bahasa Malaysia](Lecture-5-First-Class-Functions-ms)
+
+# Forelæsning 5: Funktioner som førsteklasses objekter
 
 ![Forelæsning 5: Funktioner som førsteklasses objekter](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/raw/branch/main/docs/images/lecture-05.png)
 

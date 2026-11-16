@@ -1,6 +1,6 @@
-# Kuliah 6: Penghias (decorator) dan sintaks @
-
 [English](Lecture-6-Decorators) · [Dansk](Lecture-6-Decorators-da) · **Bahasa Malaysia**
+
+# Kuliah 6: Penghias (decorator) dan sintaks @
 
 ![Kuliah 6: Penghias (decorator) dan sintaks @](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/raw/branch/main/docs/images/lecture-06.png)
 

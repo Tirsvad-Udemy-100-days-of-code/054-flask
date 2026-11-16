@@ -1,6 +1,6 @@
-# Lecture 6: Decorators and the @ syntax
-
 **English** · [Dansk](Lecture-6-Decorators-da) · [Bahasa Malaysia](Lecture-6-Decorators-ms)
+
+# Lecture 6: Decorators and the @ syntax
 
 ![Lecture 6: Decorators and the @ syntax](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/raw/branch/main/docs/images/lecture-06.png)
 

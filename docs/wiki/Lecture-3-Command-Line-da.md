@@ -1,6 +1,6 @@
-# Forelæsning 3: Kommandolinjen
-
 [English](Lecture-3-Command-Line) · **Dansk** · [Bahasa Malaysia](Lecture-3-Command-Line-ms)
+
+# Forelæsning 3: Kommandolinjen
 
 ![Forelæsning 3: Kommandolinjen](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/raw/branch/main/docs/images/lecture-03.png)
 

@@ -1,6 +1,6 @@
-# Kuliah 3: Baris arahan
-
 [English](Lecture-3-Command-Line) · [Dansk](Lecture-3-Command-Line-da) · **Bahasa Malaysia**
+
+# Kuliah 3: Baris arahan
 
 ![Kuliah 3: Baris arahan](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/raw/branch/main/docs/images/lecture-03.png)
 

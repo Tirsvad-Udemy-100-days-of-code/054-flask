@@ -1,6 +1,6 @@
-# Forelæsning 6: Dekoratører og @-syntaksen
-
 [English](Lecture-6-Decorators) · **Dansk** · [Bahasa Malaysia](Lecture-6-Decorators-ms)
+
+# Forelæsning 6: Dekoratører og @-syntaksen
 
 ![Forelæsning 6: Dekoratører og @-syntaksen](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/raw/branch/main/docs/images/lecture-06.png)
 

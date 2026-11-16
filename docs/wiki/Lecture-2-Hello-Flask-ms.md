@@ -1,6 +1,6 @@
-# Kuliah 2: Pelayan Flask yang pertama
-
 [English](Lecture-2-Hello-Flask) · [Dansk](Lecture-2-Hello-Flask-da) · **Bahasa Malaysia**
+
+# Kuliah 2: Pelayan Flask yang pertama
 
 ![Kuliah 2: Pelayan Flask yang pertama](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/raw/branch/main/docs/images/lecture-02.png)
 

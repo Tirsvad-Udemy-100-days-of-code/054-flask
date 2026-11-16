@@ -4,14 +4,15 @@
 | Key | Value |
 | --- | --- |
 | ID | BC-001 |
-| CrossReference | [SA-001] |
+| CrossReference | [SA-001], [PP-001], [MIL-006] |
 | Language | en |
-| Domain | it |
+| Domain | education |
 
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-06 | Accepted | Jens Tirsvad Nielsen | S01 | Initial version | [73a5a95] |
+| 2026-11-06 | Deprecated | Jens Tirsvad Nielsen | S01 | Initial version | [73a5a95] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added objective 6, success criterion 7, a scope item, an out-of-scope item, a risk and two constraints for the baseline milestone MIL-006; set the domain to education; reviewed in autonomous mode, not independent | [c900fff] |
 
 ---
 
@@ -38,6 +39,7 @@ A single repository can serve as a personal study record, a reference for other 
 3. Deliver automated tests (pytest) for all behaviour that can be tested without a user interface.
 4. Deliver a README and a three-language wiki (en, da, ms) with one screenshot per lecture step and a short explanation of what the lecture taught.
 5. Publish the repository with a description and topics.
+6. Bring the finished project to the common baseline of the framework: the adopted framework release, a README that lists only the documents of the repository, licence and project URL metadata, the editor settings of the baseline, an `.env.example` in the framework's form and the language line at the top of each wiki page ([MIL-006]).
 
 ## Scope
 
@@ -48,6 +50,7 @@ A single repository can serve as a personal study record, a reference for other 
 - README from the framework template, including how to create and use a local `.venv`, upgrade pip, run the project and run the tests.
 - Wiki in English, Danish and Bahasa Malaysia with screenshots for each lecture step.
 - Repository description and topics on the Gitea host.
+- The baseline milestone [MIL-006]: the framework release, the README without the private framework files in its appendix, licence and project URL metadata, `.editorconfig`, `.env.example`, the language line moved to the first line of each wiki page, review records and an updated traceability matrix. It changes no behaviour of the program.
 
 ### Out of Scope
 
@@ -55,6 +58,7 @@ A single repository can serve as a personal study record, a reference for other 
 - Django or any other framework.
 - Importing, testing or documenting the personal `.env` file; it is for the author's own tooling only.
 - Hosting the Flask application publicly.
+- Any change to `src/`, `tests/` or `docs/images/` in the baseline milestone [MIL-006], and any change to the wiki pages other than moving the language line to the first line. That milestone starts no Flask server, takes no screenshot and runs the tests only.
 
 ## Expected Benefits
 
@@ -82,6 +86,7 @@ The project supports the author's learning goal of completing the 100 Days of Co
 | 4 | Screenshots | 1 per lecture step in README and in each wiki language | Count of images in README and wiki pages |
 | 5 | Wiki languages | 3 (en, da, ms) with the same pages | Page list per language |
 | 6 | Repository metadata | Description and at least 5 topics set | Gitea repository settings |
+| 7 | The baseline milestone is done (objective 6) | `framework/scripts/check-readme.sh`, `check-languages.sh` and `check-editorconfig.sh` exit with code 0, `python -m pytest` passes, 100 % of the continuous integration (CI) checks of the pull request of [MIL-006] pass | The script exit codes and the pull request status on the git host |
 
 ## Risks
 
@@ -91,6 +96,7 @@ The project supports the author's learning goal of completing the 100 Days of Co
 | Danish or Bahasa Malaysia text contains errors | Reduced trust in the wiki | Keep sentences short and technical; the author reviews the text |
 | The token in `.env` leaks into the repository | Credential exposure | `.env` is in `.gitignore`; no code reads it; tokens are only read by the author's tooling from the environment |
 | Python 3.13 is the only interpreter available | Wording "greater than 3.13" cannot be tested on a newer version | State `requires-python = ">=3.13"` and test on the installed 3.13 |
+| The documents of the baseline milestone [MIL-006] change documents that were accepted earlier, and an AI stand-in for S01 reviews them | A defect is missed because the review is not independent | Every review record of the baseline says `Mode: autonomous, not independent`, `src/` and `tests/` are not changed, the tests run before and after, and the end-of-run summary lists the reviews for challenge |
 
 ## Assumptions
 
@@ -105,7 +111,8 @@ The project supports the author's learning goal of completing the 100 Days of Co
 - Folder structure `src/`, `tests/`, `docs/`.
 - One branch and pull request per milestone; no direct commits on `main`.
 - Doxygen comments in the source and a Doxyfile.
-- Product Owner language: English, domain IT.
+- Product Owner language: English. The domain is education since [MIL-006] (it was IT until then; the documents that [MIL-006] does not change keep the domain `it`, see the Open Issues of [PP-001]).
+- The baseline milestone [MIL-006] starts 2026-11-16 and is finished within one week, by 2026-11-23. For that milestone only, an AI stand-in for S01 reviews and accepts the changed documents.
 
 ## Cost–Benefit Assessment
 
@@ -131,3 +138,6 @@ Proceed — the scope is small, the cost is low and every objective is verifiabl
 
 [SA-001]: ./stakeholder-analysis.md
 [73a5a95]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/commit/73a5a95d28db041e4f27342cc552e18f7d386410
+[PP-001]: ./project-plan.md
+[MIL-006]: ./milestones/mil-006-framework-baseline.md
+[c900fff]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/commit/c900ffff44522bd064f94bf18008bb13f10eb560

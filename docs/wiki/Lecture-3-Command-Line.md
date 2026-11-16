@@ -1,6 +1,6 @@
-# Lecture 3: The command line
-
 **English** · [Dansk](Lecture-3-Command-Line-da) · [Bahasa Malaysia](Lecture-3-Command-Line-ms)
+
+# Lecture 3: The command line
 
 ![Lecture 3: The command line](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/raw/branch/main/docs/images/lecture-03.png)
 

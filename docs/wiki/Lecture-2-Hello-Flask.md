@@ -1,6 +1,6 @@
-# Lecture 2: The first Flask server
-
 **English** · [Dansk](Lecture-2-Hello-Flask-da) · [Bahasa Malaysia](Lecture-2-Hello-Flask-ms)
+
+# Lecture 2: The first Flask server
 
 ![Lecture 2: The first Flask server](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/raw/branch/main/docs/images/lecture-02.png)
 
