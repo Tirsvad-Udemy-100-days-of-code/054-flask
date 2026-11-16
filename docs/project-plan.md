@@ -13,7 +13,7 @@
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-06 | Deprecated | Jens Tirsvad Nielsen | S01 | Initial version | [73a5a95] |
 | 2026-11-06 | Deprecated | Jens Tirsvad Nielsen | S01 | Link each gateway to its synced Gitea milestone | [8cd73cc] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the baseline gateway MIL-006 with its schedule row, scope coverage, dependency, risk and Gantt entries; recorded the move of the end date, the domain, the open pull request #38 and the screenshot tool in the Planning Assumptions and Open Issues; set the domain to education; reviewed in autonomous mode, not independent | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the baseline gateway MIL-006 with its schedule row, scope coverage, dependency, risk and Gantt entries; recorded the move of the end date, the domain, the open pull request #38 and the screenshot tool in the Planning Assumptions and Open Issues; set the domain to education; reviewed in autonomous mode, not independent | [c900fff] |
 
 ---
 
@@ -118,3 +118,4 @@ A No-Go on a gateway moves every later gateway by the time needed to fix and re-
 [8cd73cc]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/commit/8cd73cc46b3f791e0c23a60809a50e4140089d4e
 [MIL-006]: ./milestones/mil-006-framework-baseline.md
 [GM-006]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/milestone/573
+[c900fff]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/commit/c900ffff44522bd064f94bf18008bb13f10eb560

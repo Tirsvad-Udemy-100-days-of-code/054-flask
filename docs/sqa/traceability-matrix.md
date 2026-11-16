@@ -10,7 +10,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-06 | Deprecated | Jens Tirsvad Nielsen | S01 | Initial version | [73a5a95] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added MIL-006 and its review records RC-023 to RC-026; set the domain of BC-001 and PP-001 to education; added the wiki row; reviewed in autonomous mode, not independent | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added MIL-006 and its review records RC-023 to RC-026; set the domain of BC-001 and PP-001 to education; added the wiki row; reviewed in autonomous mode, not independent | [c900fff] |
 
 ---
 
@@ -96,3 +96,4 @@ The wiki (`docs/wiki/`) is documentation, not an artifact with an ID or a Langua
 [RC-024]: ./reviews/rc-024-project-plan-baseline.md
 [RC-025]: ./reviews/rc-025-milestone-006.md
 [RC-026]: ./reviews/rc-026-wiki-baseline.md
+[c900fff]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/commit/c900ffff44522bd064f94bf18008bb13f10eb560
