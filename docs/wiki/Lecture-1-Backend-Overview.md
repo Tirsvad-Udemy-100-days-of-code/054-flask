@@ -1,6 +1,6 @@
-# Lecture 1: Frontend, backend and the request-response cycle
-
 **English** · [Dansk](Lecture-1-Backend-Overview-da) · [Bahasa Malaysia](Lecture-1-Backend-Overview-ms)
+
+# Lecture 1: Frontend, backend and the request-response cycle
 
 ![Lecture 1: Frontend, backend and the request-response cycle](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/raw/branch/main/docs/images/lecture-01.png)
 

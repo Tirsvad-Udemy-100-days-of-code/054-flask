@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -9,9 +9,15 @@ description = "Udemy 100 Days of Code, Day 54: Flask basics, command line, __mai
 readme = "README.md"
 requires-python = ">=3.13"
 license = "AGPL-3.0-only"
+license-files = ["LICENSE"]
 authors = [{ name = "Jens Tirsvad Nielsen" }]
 # No mandatory runtime dependency: the pure-Python lectures need nothing installed.
 dependencies = []
+
+[project.urls]
+Repository = "https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask"
+Documentation = "https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/wiki"
+"Issue tracker" = "https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/issues"
 
 [project.optional-dependencies]
 web = ["flask>=3.0"]

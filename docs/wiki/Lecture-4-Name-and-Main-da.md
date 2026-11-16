@@ -1,6 +1,6 @@
-# Forelæsning 4: __name__ og __main__
-
 [English](Lecture-4-Name-and-Main) · **Dansk** · [Bahasa Malaysia](Lecture-4-Name-and-Main-ms)
+
+# Forelæsning 4: __name__ og __main__
 
 ![Forelæsning 4: __name__ og __main__](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/raw/branch/main/docs/images/lecture-04.png)
 

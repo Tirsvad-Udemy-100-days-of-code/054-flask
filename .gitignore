@@ -16,6 +16,7 @@ env/
 # Local secrets (personal tooling only, never part of the project)
 .env
 .env.*
+!.env.example
 
 # Generated documentation
 docs/doxygen/

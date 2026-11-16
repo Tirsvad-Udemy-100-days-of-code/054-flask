@@ -22,6 +22,9 @@ The repository holds one small module per lecture step.
 | `src/flask_day_54/` | The lecture code in four layers: `domain`, `application`, `infrastructure`, `presentation` (see ADR-0001); each layer keeps its constants in `constants.py` |
 | `tests/` | pytest tests: `unit/` for `domain` and `application`, `e2e/` for the Flask application |
 | `docs/` | Project documents, the screenshots in `docs/images/` and the wiki sources in `docs/wiki/` |
+| `framework/` | The SQA and QC framework (a git submodule) that the project documents follow |
+| `.editorconfig` | The editor settings of the framework baseline |
+| `.env.example` | Placeholders for the git host tokens that the framework scripts read; the program itself reads no setting from `.env` |
 
 Doxygen comments in the source describe every public name; `Doxyfile` builds them into `docs/doxygen/`.
 
@@ -89,7 +92,7 @@ Leave the environment with `deactivate`. The `.venv` folder is ignored by git. I
 
 ## ▶️ Run
 
-The lecture code is added milestone by milestone. Once the Flask application exists, start the server with either:
+Start the server with either:
 
 ```bash
 flask --app flask_day_54.presentation.hello run
@@ -97,6 +100,8 @@ python -m flask_day_54.presentation.hello
 ```
 
 Then open `http://127.0.0.1:5000/`. Stop the server with `Ctrl+C`.
+
+`python -m flask_day_54.presentation.hello` starts the development server in debug mode on `127.0.0.1` (see `infrastructure/constants.py`). It is meant for local use while learning: do not expose it to a network.
 
 ## 🧪 Tests
 
@@ -113,7 +118,7 @@ python -m ruff check src tests
 
 ## 📄 License
 
-GNU Affero General Public License v3.0, see [LICENSE][license].
+GNU Affero General Public License v3.0 only (AGPL-3.0-only), see [LICENSE][license].
 
 ## 🔗 Links
 
@@ -125,7 +130,6 @@ GNU Affero General Public License v3.0, see [LICENSE][license].
 
 | Document | What it tells you |
 | --- | --- |
-| [AGENTS.md][agents] | The rules AI agents follow in this repository |
 | [Business Case][BC-001] | Why the project exists, its scope and success criteria |
 | [Stakeholder Analysis][SA-001] | Who is involved; the stakeholder IDs used for owners and reviewers |
 | [Project Plan][PP-001] | The gateways and their schedule |
@@ -133,8 +137,6 @@ GNU Affero General Public License v3.0, see [LICENSE][license].
 | [Artifact registry][registry] | Where each artifact type lives, the next version, the PO language and domain |
 | [Domain dictionary][DICT-001] | The PO terms and the IT terms |
 | [Traceability matrix][TM-001] | How the artifacts link and when each was last reviewed |
-| [Framework README][framework-readme] | The framework this project uses |
-| [Framework changelog][framework-changelog] | What changed in each framework release |
 
 ---
 
@@ -142,7 +144,6 @@ GNU Affero General Public License v3.0, see [LICENSE][license].
 [repository]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask
 [documentation]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/wiki
 [issues]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/issues
-[agents]: ./AGENTS.md
 [BC-001]: ./docs/business-case.md
 [SA-001]: ./docs/stakeholder-analysis.md
 [PP-001]: ./docs/project-plan.md
@@ -150,5 +151,3 @@ GNU Affero General Public License v3.0, see [LICENSE][license].
 [registry]: ./docs/artifact-registry.md
 [DICT-001]: ./docs/dictionary.md
 [TM-001]: ./docs/sqa/traceability-matrix.md
-[framework-readme]: ./framework/README.md
-[framework-changelog]: ./framework/CHANGELOG.md

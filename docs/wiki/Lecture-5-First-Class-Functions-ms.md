@@ -1,6 +1,6 @@
-# Kuliah 5: Fungsi sebagai objek kelas pertama
-
 [English](Lecture-5-First-Class-Functions) · [Dansk](Lecture-5-First-Class-Functions-da) · **Bahasa Malaysia**
+
+# Kuliah 5: Fungsi sebagai objek kelas pertama
 
 ![Kuliah 5: Fungsi sebagai objek kelas pertama](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/raw/branch/main/docs/images/lecture-05.png)
 

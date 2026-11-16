@@ -1,6 +1,6 @@
-# Kuliah 4: __name__ dan __main__
-
 [English](Lecture-4-Name-and-Main) · [Dansk](Lecture-4-Name-and-Main-da) · **Bahasa Malaysia**
+
+# Kuliah 4: __name__ dan __main__
 
 ![Kuliah 4: __name__ dan __main__](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/raw/branch/main/docs/images/lecture-04.png)
 

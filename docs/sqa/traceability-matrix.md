@@ -4,12 +4,13 @@
 | Key | Value |
 | --- | --- |
 | ID | TM-001 |
-| CrossReference | [BC-001] |
+| CrossReference | [BC-001], [SA-001], [PP-001], [MIL-006] |
 
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-06 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | [73a5a95] |
+| 2026-11-06 | Deprecated | Jens Tirsvad Nielsen | S01 | Initial version | [73a5a95] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added MIL-006 and its review records RC-023 to RC-026; set the domain of BC-001 and PP-001 to education; added the wiki row; reviewed in autonomous mode, not independent | pending |
 
 ---
 
@@ -23,16 +24,20 @@ updated whenever an artifact instance is created or reviewed.
 
 | Artifact Instance | Type | Language | Domain | Upstream (Backward Link) | Downstream (Forward Link) | Last Reviewed (RC-ID) |
 | --- | --- | --- | --- | --- | --- | --- |
-| [BC-001] | BC | en | it | - | [SA-001], [PP-001] | [RC-001] |
+| [BC-001] | BC | en | education | - | [SA-001], [PP-001], [MIL-006] | [RC-023], [RC-001] |
 | [SA-001] | SA | en | it | [BC-001] | [BC-001] | [RC-002] |
-| [PP-001] | PP | en | it | [BC-001], [SA-001] | [MIL-001] to [MIL-005] | [RC-021] |
+| [PP-001] | PP | en | education | [BC-001], [SA-001] | [MIL-001] to [MIL-005], [MIL-006] | [RC-024], [RC-021] |
 | [ADR-0001] | ADR | - | - | [BC-001], [PP-001] | [MIL-001] to [MIL-004] | [RC-010] |
 | [DICT-001] | DICT | en | it | [BC-001], [SA-001] | - | [RC-004] |
 | [MIL-001] | MIL | en | it | [BC-001], [PP-001], [ADR-0001] | - | [RC-011], [RC-015] |
 | [MIL-002] | MIL | en | it | [BC-001], [PP-001], [ADR-0001] | - | [RC-012], [RC-016] |
 | [MIL-003] | MIL | en | it | [BC-001], [PP-001], [ADR-0001] | - | [RC-013], [RC-017] |
 | [MIL-004] | MIL | en | it | [BC-001], [PP-001], [ADR-0001] | - | [RC-014], [RC-018] |
-| [MIL-005] | MIL | en | it | [BC-001], [PP-001] | - | [RC-009], [RC-019], [RC-020], [RC-022] |
+| [MIL-005] | MIL | en | it | [BC-001], [PP-001] | [MIL-006] | [RC-009], [RC-019], [RC-020], [RC-022] |
+| [MIL-006] | MIL | en | education | [PP-001], [BC-001], [MIL-005] | - | [RC-025] |
+| Wiki (`docs/wiki/`) | Wiki | en, da, ms | education | [BC-001], [MIL-006] | - | [RC-026], [RC-019], [RC-022] |
+
+The wiki (`docs/wiki/`) is documentation, not an artifact with an ID or a Language and Domain row; it has its own review records, [RC-026], [RC-019] and [RC-022]. The domain of [BC-001], [PP-001], [MIL-006] and the wiki is `education` since [MIL-006]; the other documents keep the domain `it` they were accepted with (see the Open Issues of [PP-001]). [MIL-006] changes no source, test or image file; for the wiki it moves the language line of each page to the first line.
 
 ## Concern Coverage
 
@@ -86,3 +91,8 @@ updated whenever an artifact instance is created or reviewed.
 [RC-020]: ./reviews/rc-020-code-mil-005-docs-wiki.md
 [RC-021]: ./reviews/rc-021-project-plan-delta.md
 [RC-022]: ./reviews/rc-022-wiki-published-mil-005.md
+[MIL-006]: ../milestones/mil-006-framework-baseline.md
+[RC-023]: ./reviews/rc-023-business-case-baseline.md
+[RC-024]: ./reviews/rc-024-project-plan-baseline.md
+[RC-025]: ./reviews/rc-025-milestone-006.md
+[RC-026]: ./reviews/rc-026-wiki-baseline.md

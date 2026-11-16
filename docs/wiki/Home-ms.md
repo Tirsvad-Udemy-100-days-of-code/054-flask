@@ -1,6 +1,6 @@
-# Flask Hari 54: 100 Days of Code
-
 [English](Home) · [Dansk](Home-da) · **Bahasa Malaysia**
+
+# Flask Hari 54: 100 Days of Code
 
 Penyelesaian Hari 54 bagi kursus Udemy "100 Days of Code: The Complete Python Pro Bootcamp" yang boleh dijalankan dan telah diuji. Wiki ini menerangkan, kuliah demi kuliah, apa yang dilakukan oleh kod dan apa yang kita pelajari daripada setiap kuliah.
 

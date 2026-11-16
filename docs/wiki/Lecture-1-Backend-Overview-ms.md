@@ -1,6 +1,6 @@
-# Kuliah 1: Bahagian hadapan, bahagian belakang dan kitaran permintaan-respons
-
 [English](Lecture-1-Backend-Overview) · [Dansk](Lecture-1-Backend-Overview-da) · **Bahasa Malaysia**
+
+# Kuliah 1: Bahagian hadapan, bahagian belakang dan kitaran permintaan-respons
 
 ![Kuliah 1: Bahagian hadapan, bahagian belakang dan kitaran permintaan-respons](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/054-flask/raw/branch/main/docs/images/lecture-01.png)
 
